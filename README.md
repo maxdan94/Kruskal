@@ -16,9 +16,10 @@ Should scale to at least one billion edges on a commodity machine.
 
 ## To execute
 
-./kruskal edgelist.txt res.txt  
-- edgelist.txt should contain one edge on each line "u v w" u and v are node id (unsigned int) and w is the edge weight (double).
-- res.txt will contained the list of the edges of the resulting tree
+"./kruskal edgelist.txt res.txt"
+- "edgelist.txt" should contain one weighted edge on each line "u v w", where u and v are node IDs (unsigned int) and w is the edge weight (double). Better if node IDs go from zero to number of nodes minus 1. The input weighted graph should be connected, if not a forest will be obtained.
+- "res.txt" will contain the list of the edges of the resulting tree.
+- Will print the sum of the weights of a minimal spaning tree in the terminal.
 
 ## Initial contributors
 
