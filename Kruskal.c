@@ -117,11 +117,14 @@ void Union(unsigned xr, unsigned yr, unionfind *uf){
 	//	return;
 	//}
 	if (uf->r[xr] < uf->r[yr]){
-     		uf->p[xr]=yr;
+     		uf->p[xr] = yr;
+	}
+	else if (uf->r[xr] > uf->r[yr]) {
+		uf->p[yr] = xr;
 	}
 	else {
-		uf->p[yr]=xr;
-		uf->r[yr]=uf->r[xr]+1;
+		uf->p[yr] = xr;
+		uf->r[xr] = uf->r[xr]+1;
 	}
 }
 
